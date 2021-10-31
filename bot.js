@@ -4,6 +4,7 @@ const auth = require('./auth.json');
 const minimist = require('minimist');
 const axios = require('axios');
 const schedule = require('node-schedule');
+const mongoose = require("mongoose");
 
 let events = [];
 let volunteers = [];
@@ -387,5 +388,24 @@ const err_bad_format = new Discord.MessageEmbed()
 	.setFooter("MeetUp Bot")
 	.setTimestamp();
 
+	
 
 // todo figure pings out
+
+mongoose.connect(auth.SRV,{
+	useNewURLParser: true,
+	useUnifiedTopology: true,
+
+}).then(()=>{
+	console.log("Connected to the Database");
+}).catch((err)=>{
+	console.log(err);
+});
+
+
+
+app.use(Router);
+
+app.listen(3000, () => {
+  console.log("Server is running at port 3000");
+});
