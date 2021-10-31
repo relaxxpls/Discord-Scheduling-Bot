@@ -1,3 +1,5 @@
+// Start of the Awesome Discord Scheduling Bot
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const auth = require('./auth.json');
