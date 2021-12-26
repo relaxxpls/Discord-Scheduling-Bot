@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/3d157ecd-5470-4bf9-b387-3ef4df42f90a/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/welistendiscord"
+}
